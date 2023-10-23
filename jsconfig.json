@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/styles/*": ["./src/styles/*"]
     }
   }
 }
+
+// stack
+// core
+// html js es6+ css php
+// libraries & frameworks
+// react nextjs gsap framer motion scss laravel
+// tools
+// Git, npm, yarn, Vercel, Figma, Sketch, Adobe XD
+// Wordpress, Shopify, headless CMSs (Sanity, Prismic)

@@ -1,0 +1,40 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  @media (max-width: 500px) {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.3rem;
+}
+
+.word {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disabled {
+  text-decoration: line-through;
+  position: relative;
+  opacity: 0.2;
+  cursor: text;
+}

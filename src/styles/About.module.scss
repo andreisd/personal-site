@@ -1,0 +1,155 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.heroWrapper {
+  position: relative;
+}
+
+/* Text */
+
+.title {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 500px) {
+    gap: 1.5rem;
+  }
+}
+
+.word {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-size: 7.75vw;
+  line-height: 0.6;
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+
+  @media (max-width: 500px) {
+    font-size: 11vw;
+  }
+}
+
+/* Images */
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  position: relative;
+}
+
+.image1 {
+  position: relative;
+  z-index: 2;
+}
+
+.image2 {
+  position: absolute;
+  z-index: 1;
+}
+
+.image3 {
+  position: absolute;
+  z-index: 1;
+}
+
+.imageWrapper {
+  width: 10.55vw;
+  height: 13vw;
+
+  @media (max-width: 500px) {
+    width: 23.55vw;
+    height: 30vw;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.image1 .image img {
+  object-position: top;
+}
+
+/* Scroll */
+
+.scroll {
+  width: auto;
+  position: absolute;
+  bottom: 2rem;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.scrollWord {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Stack */
+
+.stack {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+.stackTitle {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.stackList {
+  margin-bottom: 4rem;
+  max-width: 50rem;
+}
+
+.stackItems {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stackItem {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 1px solid rgb(205, 205, 205);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
