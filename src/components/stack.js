@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import styles from "@/styles/Stack.module.scss";
+// import styles from "@/styles/Stack.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { scaleIn, scaleIn2, scaleInDelay } from "src/animations";
@@ -94,9 +94,9 @@ const tools = [
 
 export default function Stack() {
   return (
-    <div className={styles.stack}>
+    <div className="stack">
       <motion.h1
-        className={styles.stackTitle}
+        className="stackTitle"
         variants={scaleIn2}
         initial="initial"
         whileInView="animate"
@@ -107,10 +107,10 @@ export default function Stack() {
         🧑‍💻 Tech stack
       </motion.h1>
 
-      <div className={styles.stackList}>
-        <div className={styles.stackItem}>
+      <div className="stackList">
+        <div className="stackItem">
           <motion.div
-            className={styles.stackType}
+            className="stackType"
             variants={scaleIn2}
             initial="initial"
             whileInView="animate"
@@ -120,11 +120,11 @@ export default function Stack() {
           >
             Core
           </motion.div>
-          <div className={styles.stackItemList}>
+          <div className="stackItemList">
             {core.map((item, index) => {
               return (
                 <motion.div
-                  className={styles.stackItemTitle}
+                  className="stackItemTitle"
                   variants={scaleInDelay}
                   initial="initial"
                   whileInView="animate"
@@ -141,9 +141,9 @@ export default function Stack() {
           </div>
         </div>
 
-        <div className={styles.stackItem}>
+        <div className="stackItem">
           <motion.div
-            className={styles.stackType}
+            className="stackType"
             variants={scaleIn2}
             initial="initial"
             whileInView="animate"
@@ -153,11 +153,11 @@ export default function Stack() {
           >
             Frameworks & Libraries
           </motion.div>
-          <div className={styles.stackItemList}>
+          <div className="stackItemList">
             {frameworks.map((item, index) => {
               return (
                 <motion.div
-                  className={styles.stackItemTitle}
+                  className="stackItemTitle"
                   variants={scaleInDelay}
                   initial="initial"
                   whileInView="animate"
@@ -174,9 +174,9 @@ export default function Stack() {
           </div>
         </div>
 
-        <div className={styles.stackItem}>
+        <div className="stackItem">
           <motion.div
-            className={styles.stackType}
+            className="stackType"
             variants={scaleIn2}
             initial="initial"
             whileInView="animate"
@@ -186,11 +186,11 @@ export default function Stack() {
           >
             Tools & CMS
           </motion.div>
-          <div className={styles.stackItemList}>
+          <div className="stackItemList">
             {tools.map((item, index) => {
               return (
                 <motion.div
-                  className={styles.stackItemTitle}
+                  className="stackItemTitle"
                   variants={scaleInDelay}
                   initial="initial"
                   whileInView="animate"

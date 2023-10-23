@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/Footer.module.scss";
+// import styles from "@/styles/Footer.module.scss";
 import { getChars } from "src/animations";
 
 const links = [
@@ -22,16 +22,16 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.row}>
-        <div className={styles.word}>{getChars("© 2023")}</div>
+    <footer className="footer">
+      <div className="footer__row">
+        <div className="footer__word">{getChars("© 2023")}</div>
       </div>
-      <div className={styles.nav}>
+      <div className="footer__nav">
         {links.map((link, index) => {
           const { title, href, target } = link;
           return (
-            <Link key={`l_${index}`} href={href} target={target} className={`${styles.row} ${styles.link}`}>
-              <div className={styles.word}>{getChars(title)}</div>
+            <Link key={`l_${index}`} href={href} target={target} className="footer__row footer__link">
+              <div className="footer__word">{getChars(title)}</div>
             </Link>
           );
         })}

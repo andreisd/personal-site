@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { imageWidth, imageHeight, getWordsChars, imageToLeft, imageToRight, translate } from "src/animations";
 import { useMotionValue, useScroll, useTransform } from "framer-motion";
-import styles from "@/styles/About.module.scss";
+// import styles from "@/styles/About.module.scss";
 import Image from "next/image";
 import Story from "@/components/story";
 import Stack from "@/components/stack";
@@ -40,61 +40,79 @@ export default function About() {
 
   return (
     <Page>
-      <div className={styles.hero}>
+      <div className="hero-about">
         <h1 className="sr-only">Hey! I`m Andrei, A 26 years old Creative Developer based in Bucharest</h1>
-        <h1 className={styles.title} aria-hidden="true">
-          <div className={styles.row}>{getWordsChars("Hey! I'm Andrei,", styles.word)}</div>
-          <div className={styles.row}>{getWordsChars("A 26 years old", styles.word)}</div>
-          <div className={styles.row}>{getWordsChars("Creative Developer", styles.word)}</div>
-          <div className={styles.row}>{getWordsChars("based in Bucharest", styles.word)}</div>
+        <h1 className="hero-about__title" aria-hidden="true">
+          <div className="hero-about__row">{getWordsChars("Hey! I'm Andrei,", "hero-about__word")}</div>
+          <div className="hero-about__row">{getWordsChars("A 26 years old", "hero-about__word")}</div>
+          <div className="hero-about__row">{getWordsChars("Creative Developer", "hero-about__word")}</div>
+          <div className="hero-about__row">{getWordsChars("based in Bucharest", "hero-about__word")}</div>
         </h1>
 
-        <div className={styles.images}>
+        <div className="hero-about__images">
           <motion.div
-            className={`${styles.imageWrapper} ${styles.image1}`}
+            className="hero-about__imageWrapper hero-about__image1"
             style={{ translateY: transform, scale: scale, rotate: rotate }}
           >
             <motion.div
-              className={styles.image}
+              className="hero-about__image"
               variants={imageHeight}
               initial="initial"
               animate="enter"
               exit="exit"
             >
-              <Image src={"/ab1.webp"} alt={"About"} fill={true} />
+              <Image
+                src={"/ab1.webp"}
+                alt={"About"}
+                fill={true}
+                placeholder="blur"
+                blurDataURL={"/ab1.webp"}
+              />
             </motion.div>
           </motion.div>
           <motion.div
-            className={`${styles.imageWrapper} ${styles.image2}`}
+            className="hero-about__imageWrapper hero-about__image2"
             style={{ translateY: transform2, scale: scale, rotate: rotate }}
           >
             <motion.div
-              className={styles.image}
+              className="hero-about__image"
               variants={imageToLeft}
               initial="initial"
               animate="enter"
               exit="exit"
             >
-              <Image src={"/about2.webp"} alt={"About"} fill={true} />
+              <Image
+                src={"/about2.webp"}
+                alt={"About"}
+                fill={true}
+                placeholder="blur"
+                blurDataURL={"/about2.webp"}
+              />
             </motion.div>
           </motion.div>
           <motion.div
-            className={`${styles.imageWrapper} ${styles.image3}`}
+            className="hero-about__imageWrapper hero-about__image3"
             style={{ translateY: transform2, scale: scale, rotate: rotate }}
           >
             <motion.div
-              className={styles.image}
+              className="hero-about__image"
               variants={imageToRight}
               initial="initial"
               animate="enter"
               exit="exit"
             >
-              <Image src={"/about4.webp"} alt={"About"} fill={true} />
+              <Image
+                src={"/about4.webp"}
+                alt={"About"}
+                fill={true}
+                placeholder="blur"
+                blurDataURL={"/about4.webp"}
+              />
             </motion.div>
           </motion.div>
         </div>
 
-        <div className={styles.scroll}>{getWordsChars("Scroll down", styles.scrollWord)}</div>
+        <div className="hero-about__scroll">{getWordsChars("Scroll down", "hero-about__scrollWord")}</div>
       </div>
 
       <Story story={story} />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import styles from "@/styles/Story.module.scss";
+// import styles from "@/styles/Story.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { scaleIn, scaleIn2 } from "src/animations";
@@ -18,17 +18,18 @@ const fadeIn = {
 
 export default function Story({ story }) {
   return (
-    <div className={styles.story}>
+    <div className="story">
       <div className="flex column container">
         {story.map((chapter, index) => {
           const { title, text, image, imagePos } = chapter;
-          const secondClass = imagePos === "right" ? styles.right : styles.left;
+          const secondClass =
+            imagePos === "right" ? "story__imageWrapper story__right" : "story__imageWrapper story__left";
           return (
             <div className="col-6" key={`c_${index}`}>
               {image && imagePos && (
-                <div className={`${styles.imageWrapper} ${secondClass}`}>
+                <div className={secondClass}>
                   <motion.div
-                    className={styles.image}
+                    className="story__image"
                     variants={scaleIn2}
                     initial="initial"
                     whileInView="animate"
@@ -36,12 +37,18 @@ export default function Story({ story }) {
                       once: true,
                     }}
                   >
-                    <Image src={`/${image}`} alt={"About"} fill={true} />
+                    <Image
+                      src={`/${image}`}
+                      alt={"About"}
+                      fill={true}
+                      placeholder="blur"
+                      blurDataURL={`/${image}`}
+                    />
                   </motion.div>
                 </div>
               )}
               <motion.div
-                className={styles.badge}
+                className="story__badge"
                 variants={scaleIn}
                 initial="initial"
                 whileInView="animate"
@@ -49,7 +56,7 @@ export default function Story({ story }) {
                   once: true,
                 }}
               >
-                <div className={styles.dot}></div>
+                <div className="story__dot"></div>
                 {title}
               </motion.div>
 
