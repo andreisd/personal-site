@@ -22,13 +22,7 @@ export default function Home() {
                 animate="enter"
                 exit="exit"
               >
-                <Image
-                  src={"/creative.gif"}
-                  alt={"Steve Jobs"}
-                  fill={true}
-                  placeholder="blur"
-                  blurDataURL={"/creative.gif"}
-                />
+                <Image src={"/creative.gif"} alt={"Steve Jobs"} fill={true} />
               </motion.div>
             </div>
           </div>
@@ -46,13 +40,7 @@ export default function Home() {
                 animate="enter"
                 exit="exit"
               >
-                <Image
-                  src={"/developer.gif"}
-                  alt={"Smash that keyboard"}
-                  fill={true}
-                  placeholder="blur"
-                  blurDataURL={"/developer.gif"}
-                />
+                <Image src={"/developer.gif"} alt={"Smash that keyboard"} fill={true} />
               </motion.div>
             </div>
             <div className={styles.word}>{getChars("DEVELOPER")}</div>

@@ -36,13 +36,7 @@ export default function Story({ story }) {
                       once: true,
                     }}
                   >
-                    <Image
-                      src={`/${image}`}
-                      alt={"About"}
-                      fill={true}
-                      placeholder="blur"
-                      blurDataURL={`/${image}`}
-                    />
+                    <Image src={`/${image}`} alt={"About"} fill={true} />
                   </motion.div>
                 </div>
               )}

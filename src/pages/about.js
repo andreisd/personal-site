@@ -61,13 +61,7 @@ export default function About() {
               animate="enter"
               exit="exit"
             >
-              <Image
-                src={"/ab1.webp"}
-                alt={"About"}
-                fill={true}
-                placeholder="blur"
-                blurDataURL={"/ab1.webp"}
-              />
+              <Image src={"/ab1.webp"} alt={"About"} fill={true} />
             </motion.div>
           </motion.div>
           <motion.div
@@ -81,13 +75,7 @@ export default function About() {
               animate="enter"
               exit="exit"
             >
-              <Image
-                src={"/about2.webp"}
-                alt={"About"}
-                fill={true}
-                placeholder="blur"
-                blurDataURL={"/about2.webp"}
-              />
+              <Image src={"/about2.webp"} alt={"About"} fill={true} />
             </motion.div>
           </motion.div>
           <motion.div
@@ -101,13 +89,7 @@ export default function About() {
               animate="enter"
               exit="exit"
             >
-              <Image
-                src={"/about4.webp"}
-                alt={"About"}
-                fill={true}
-                placeholder="blur"
-                blurDataURL={"/about4.webp"}
-              />
+              <Image src={"/about4.webp"} alt={"About"} fill={true} />
             </motion.div>
           </motion.div>
         </div>
