@@ -17,7 +17,7 @@ const story = [
   },
   {
     title: "The Journey",
-    text: "<p>Over the years I've started working with agencies from Bucharest, and then from the world. I've helped to build more than 20 websites, from small to big, from simple to complex, as a Frontend Developer using a lot display: flex;</p>",
+    text: "<p>Over the years I've started working with agencies from Bucharest, and then from the world. I've helped to build more than 20 websites, from small to big, from simple to complex, as a Frontend Developer using a lot of display: flex;</p>",
     image: "css.gif",
     imagePos: "right",
   },

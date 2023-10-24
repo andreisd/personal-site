@@ -43,6 +43,9 @@ const frameworks = [
     title: "Framer Motion",
   },
   {
+    title: "Lenis Scroll",
+  },
+  {
     title: "SASS",
   },
   {
